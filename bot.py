@@ -96,12 +96,12 @@ async def mods(interaction: discord.Interaction, type: Choice[str], mod: Optiona
         loaded_cogs = ", ".join(f"**{cog.replace('cogs.', '')}**" for cog in bot.extensions.keys())
         embed=discord.Embed(title="⚙ NASH 資訊管理", color=0xea8053)
         embed.add_field(name="已載入的模組", value=loaded_cogs, inline=False)
-        await interaction.response.send_message(embed=embed)
+        await interaction.response.send_message(embed=embed,ephemeral=True)
         return
 
     embed=discord.Embed(title="⚙ NASH 資訊管理", color=0xea8053)
     embed.add_field(name=action, value=mod, inline=False)
-    await interaction.response.send_message(embed=embed)
+    await interaction.response.send_message(embed=embed,ephemeral=True)
 
 async def main():
     await load_extensions()
