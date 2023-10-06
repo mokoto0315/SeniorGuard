@@ -67,7 +67,7 @@ class Service(Cog_Extension):
             channel = self.bot.get_channel(int(channel_id['School']))
             await channel.purge(check=lambda msg: msg.author == self.bot.user)
             embed=discord.Embed(title="🏫 NASH 校園服務", color=0xea8053,timestamp=datetime.utcnow())
-            embed.add_field(name="按下下方按紐尋求校園援助",value="目前提供以下服務\n```1.詢問問題\n2.舉報違規```", inline=False)
+            embed.add_field(name="按下下方按紐尋求校園援助",value="目前提供以下服務\n```1.詢問問題\n2.舉報違規\n3.事務投稿```\n```diff\n-為節省伺服器版面 5分鐘內未回應 24hr未回覆將自動關閉", inline=False)
             embed.set_footer(text=channel.guild.name)
             await channel.send(embed=embed,view=view)
         except Exception as e:
