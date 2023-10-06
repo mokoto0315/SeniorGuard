@@ -23,7 +23,7 @@ class ETC(Cog_Extension):
         embed=discord.Embed(title="🏫 NASH 校園管理", color=0xb8d8af,timestamp=datetime.utcnow())
         embed.set_thumbnail(url=member.avatar.url)
         embed.add_field(name="成員", value=member.mention, inline=False)
-        embed.add_field(name="歡迎", value="歡迎你的加入 看完規則就去註冊囉 \n 目前還在收尾階段 如果有BUG或建議歡迎提出", inline=False)
+        embed.add_field(name="歡迎", value="歡迎你的加入 看完規則就去註冊囉 如有疑問請私訊官方帳號", inline=False)
         embed.set_image(url="https://cdn.discordapp.com/attachments/1155447235794976868/1157597538703134780/1.png?ex=65193038&is=6517deb8&hm=623b1b12fdb4e257a52316d32e552988e30aef148dfee3589a0d9c56a45bc3c0&")
         embed.set_footer(text=member.guild.name)
         await channel.send(embed=embed)
